@@ -1,0 +1,16 @@
+{{ define "content" }}
+  <div class="userboxes">
+    {{ range $name := .Site.Params.names }}
+    <div class="userbox selectable">
+      <a href="{{ $name | absURL }}">
+        {{ with (index $.Site.Params $name).avatarurl }}
+        <div class="avatar">
+          <img src="{{ . | absURL }}" alt="avatar"></img>
+        </div>
+        {{ end }}
+        <div class="username">{{ (index $.Site.Params $name).author }}</div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+{{ end }}
