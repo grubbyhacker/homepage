@@ -1,7 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://grubbyhacker.github.io/homepage/'
 languageCode = 'en-us'
 title = 'Fleig Family Website'
 disableKinds = ['taxonomy', 'term']
+relativeURLs = true
 
 [Params]
   names = ["amanda", "roger"]
