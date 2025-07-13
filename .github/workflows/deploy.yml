@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    # Give the build job permissions to upload artifacts and use GitHub's token
     permissions:
       contents: read
       pages: write
@@ -23,8 +22,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          # Use the 'extended' version if your site uses features like Sass/SCSS
-          hugo-version: '0.148.1' # Specify the version of Hugo you want to use
+          hugo-version: '0.148.1' 
           extended: true
 
       # Build the Hugo site
@@ -50,7 +48,7 @@ jobs:
       pages: write
       id-token: write
 
-    # Use the official GitHub Pages deployment action
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
