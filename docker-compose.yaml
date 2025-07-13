@@ -1,21 +1,13 @@
-version: '3.8'
+version: '3.8' # Keep this for now, the warning is minor.
 services:
   hugo-dev:
-    image: ghcr.io/gohugoio/hugo:v0.148.1
+    build: . # Instructs Compose to build the image from the Dockerfile in the current directory
     container_name: hugo_dev
     working_dir: /src
-    volumes:
-      - .:/src # Maps the current directory (host) to /src (container)
     ports:
       - "1313:1313"
-    command:
-      - server
-      - --source
-      - /src
-      - --bind
-      - 0.0.0.0
-      - --baseURL
-      - http://localhost:1313/
-      - --disableFastRender
-      - --logLevel
-      - debug
+    # The command is now defined in the Dockerfile's CMD instruction
+    develop:
+      watch:
+        - path: . # Watch the entire current directory on the host
+          action: rebuild # <--- IMPORTANT: Rebuild the image and restart the container on changes
