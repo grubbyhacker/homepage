@@ -8,4 +8,4 @@ services:
       - .:/src # Maps the current directory (host) to /src (container)
     ports:
       - "1313:1313"
-    command: server --source /src --bind 0.0.0.0 --baseURL http://localhost:1313/
+    command: server --source /src --bind 0.0.0.0 --baseURL http://localhost:1313/ --disableFastRender
