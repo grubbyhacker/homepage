@@ -4,6 +4,7 @@ date = 2024-10-16T15:50:08-07:00
 draft = false
 +++
 # About Me
+![Avatar Image](headshot.jpeg)
 - **Expert Software Development Leadership:** Possessing over two and a half decades of experience, I excel at optimizing developer productivity, efficiency, and effectiveness, ultimately enabling engineers to deliver exceptional customer value. My strategic investments in technology and processes are guided by a deep understanding of developers' needs and a shared passion for well-crafted code and superior tools.
 - **High-Performing Team Builder:** Recognized for my ability to cultivate and retain highly skilled technical teams that consistently deliver outstanding return on investment. Proven success in managing both senior technical talent and junior talent, fostering growth and maintaining a robust bench. Managed team sizes up to 100 with broader influence.
 - **Thrives in Complexity:** Frequently sought after to provide solutions to intricate software engineering problems, including those involving artificial intelligence and very large scale data management. Capable of managing immense complexity and handling multiple large projects concurrently. Many projects cited below were/are overlapping.
