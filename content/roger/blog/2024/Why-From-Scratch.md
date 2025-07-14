@@ -23,8 +23,8 @@ I chose Hugo because a close friend of mine has a very similar site using Hugo a
 # Is this a principle?
 I believe this is a principle for life that is waiting for yet another blog post. In a very real sense this was about going back to "first principles" to make sure that I understood the basics. Along the way I am picking up (or brushing up on) other skills such as:
 - I made all of my edits using a pimped-out nvim setup
-- In order to get to this point I had to really deck out a new macbook pro with all sort of tools.
-- My git and github sills were rusty.
+- In order to get to this point I had to really deck out a new macbook pro with all sorts of tools.
+- My git and github skills were rusty.
 - I was able to play with both chatGPT and Gemini for all of that web development and styling.
 - Looking ahead I will get this site on github and running in a container like github codespaces - something else I would like to learn.
 - I also want to learn how to do continuous deployment to wherever I host this solution.
