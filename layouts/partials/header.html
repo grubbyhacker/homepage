@@ -1,6 +1,6 @@
 {{ if or .IsHome (eq .Slug "disclaimer") }}
 <div class="header" >
-  <div class="pagetitle"> <a href="{{ "/" | absURL }}">{{ .Site.Params.title }}</a></div>
+  <div class="pagetitle"> <a href="{{ "" | absURL }}">{{ .Site.Params.title }}</a></div>
   <nav class="navbar">
     <ul>
     {{ range $name := .Site.Params.names }}
