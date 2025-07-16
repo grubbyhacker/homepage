@@ -23,17 +23,6 @@
           '';
         };
 
-        # Optional: Build a Docker image with Hugo installed
-        packages.default = pkgs.dockerTools.buildLayeredImage {
-          name = "hugo-dev";
-          tag = "latest";
-          contents = [ hugo ];
-          config = {
-            Cmd = [ "hugo" "server" "--bind=0.0.0.0" "--baseURL=http://localhost:1313" "--watch" "--buildDrafts" ];
-            WorkingDir = "/src";
-            Volumes = { "/src" = {}; };
-          };
-        };
       }
     );
 }
