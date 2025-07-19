@@ -1,0 +1,15 @@
+{{ $current_user := index $.Site.Data.users .Section }}
+<div class="header">
+  <div class="pagetitle">
+    <a href="{{ .Section | absURL }}">{{ $current_user.description }}</a>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li class="{{ if hasSuffix .Permalink "/about/" }}active{{ end }}"><a href="{{ .Section | absURL}}/about">About</a></li>
+      <li class="{{ if hasSuffix .Permalink "/blog/" }}active{{ end }}"><a href="{{ .Section | absURL}}/blog">Blog</a></li>
+      {{ if $current_user.email }}
+      <li><a href="mailto:{{ $current_user.email }}">Contact</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>

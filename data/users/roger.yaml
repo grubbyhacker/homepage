@@ -1,0 +1,14 @@
+author: "Roger Fleig"
+info: "Software Engineer"
+description: "Roger Fleig"
+keywords: "blog,engineer,personal"
+avatarurl: "images/roger/avatar.jpeg"
+social:
+  - name: "Github"
+    icon: "fab fa-github fa-2x"
+    weight: 1
+    url: "https://github.com/grubbyhacker"
+  - name: "LinkedIn"
+    icon: "fab fa-linkedin fa-2x"
+    weight: 2
+    url: "https://www.linkedin.com/in/rogerfleig/"

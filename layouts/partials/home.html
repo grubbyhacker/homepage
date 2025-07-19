@@ -1,6 +1,6 @@
 <div class="userboxes">
   <div class="userbox">
-    {{ $user := index .Site.Params .Section }} {{/* Get the parameters for the current section (user) */}}
+    {{ $user := index .Site.Data.users .Section }}
     {{ if (isset $user "avatarurl") }}
       <div class="avatar">
         {{- partial "avatar-image.html" (dict
@@ -11,7 +11,7 @@
     {{ end }}
     <div class="username">{{ $user.author }}</div>
     <div class="navlinks">
-    {{ with (index .Site.Params.global .Section).social }}
+    {{ with $user.social }}
       {{ range sort . "weight" }}
         {{ if .icon }}
           <div class="navicon navlink">

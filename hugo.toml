@@ -7,35 +7,3 @@ disableKinds = ['taxonomy', 'term']
   names = ["amanda", "roger"]
   title = 'Fleig Family Website'
 
-[Params.amanda]
-  author = "Amanda Fleig"
-  info = "Quilting wizard"
-  description = "Amanda Fleig"
-  keywords = "quilter"
-  avatarurl = "images/amanda/avatar.jpeg"
-  email = "mandyfleig@gmail.com"
-
-[[Params.global.amanda.social]]
-  name = "Instagram"
-  icon = "fab fa-instagram fa-2x"
-  weight = 3
-  url = "https://www.instagram.com/i_sew_4_my_sanity/"
-
-[Params.roger]
-  author = "Roger Fleig"
-  info = "Software Engineer"
-  description = "Roger Fleig"
-  keywords = "blog,engineer,personal"
-  avatarurl = "images/roger/avatar.jpeg"
-  email = "rogerfleig@gmail.com"
-
-[[Params.global.roger.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
-    weight = 1
-    url = "https://github.com/grubbyhacker"
-[[Params.global.roger.social]]
-    name = "LinkedIn"
-    icon = "fab fa-linkedin fa-2x"
-    weight = 2
-    url = "https://www.linkedin.com/in/rogerfleig/"

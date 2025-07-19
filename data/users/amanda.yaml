@@ -1,0 +1,10 @@
+author: "Amanda Fleig"
+info: "Quilting wizard"
+description: "Amanda Fleig"
+keywords: "quilter"
+avatarurl: "images/amanda/avatar.jpeg"
+social:
+  - name: "Instagram"
+    icon: "fab fa-instagram fa-2x"
+    weight: 3
+    url: "https://www.instagram.com/i_sew_4_my_sanity/"

@@ -12,7 +12,11 @@
 </head>
 <body>
   <div class="grid-container">
-    {{ partial "header.html" . }}
+    {{ if or .IsHome (eq .Slug "disclaimer") }}
+        {{ partial "header/home-header.html" . }}
+    {{ else }}
+        {{ partial "header/section-header.html" . }}
+    {{ end }}
     <div class="content">
        {{ block "content" . }}{{ end }}
     </div>
