@@ -13,9 +13,13 @@ draft = false
 
 # Work Experience
 
-## Google Inc - Sunnyvale, CA \- Core Machine Learning, Technical Infrastructure
+## *Crusoe.ai \- San Francisco, CA*
+**Senior Director of Engineering  Dec 2024 \- Present**  
+Leading change at a climate aligned AI startup.
 
-**Director of Engineering	May 2021 \- Present**  
+## *Google Inc - Sunnyvale, CA \- Core Machine Learning, Technical Infrastructure*
+
+**Director of Engineering	May 2021 \- Nov 2024**  
 Core ML creates foundational infrastructure, services and code frameworks that power machine learning across all Google products. Built and led a team of 40 engineers. Contributed to TensorFlow, Jax, XLA, eval systems, high scale release infrastructure, and making it easy for Google engineers to integrate ML into products. Launched the first Google-wide LLM based developer solution that automates required code review steps. Worked closely with Google Deep Mind and other research teams to deliver critical infrastructure to all Gemini model developers and users at Google. Examples: [blogpost](https://blog.research.google/2023/05/large-sequence-models-for-software.html)
 
 ## *Google Inc \- Sunnyvale, CA \- Vertex AI, Google Cloud Platform*

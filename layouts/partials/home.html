@@ -1,11 +1,15 @@
 <div class="userboxes">
   <div class="userbox">
-    {{ if (isset (index .Site.Params .Section) "avatarurl") }}
-      {{ with (index .Site.Params .Section).avatarurl }}
-        <div class="avatar"><img src="{{ . | relURL }}" alt="avatar"></div>
-      {{ end }}
+    {{ $user := index .Site.Params .Section }} {{/* Get the parameters for the current section (user) */}}
+    {{ if (isset $user "avatarurl") }}
+      <div class="avatar">
+        {{- partial "avatar-image.html" (dict
+          "imagePath" $user.avatarurl
+          "altText" (printf "%s's avatar" $user.author)
+        ) -}}
+      </div>
     {{ end }}
-    <div class="username">{{ (index .Site.Params .Section).author }}</div>
+    <div class="username">{{ $user.author }}</div>
     <div class="navlinks">
     {{ with (index .Site.Params.global .Section).social }}
       {{ range sort . "weight" }}

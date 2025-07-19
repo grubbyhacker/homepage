@@ -1,0 +1,12 @@
+{{- /* layouts/partials/avatar-image.html */ -}}
+{{- $imagePath := .imagePath -}}
+{{- $altText := default "User Avatar" .altText -}}
+
+{{- $image := resources.Get $imagePath -}}
+{{- with $image -}}
+  {{- /* Resize once to a standard, optimal size */ -}}
+  {{- $resized := .Resize "300x300 Center" -}} {{/* Or "240x" if not square */}}
+  <img src="{{ $resized.RelPermalink }}" alt="{{ $altText }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+{{- else -}}
+  {{- warnf "Avatar image not found at %q" $imagePath -}}
+{{- end -}}

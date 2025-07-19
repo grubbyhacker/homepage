@@ -1,14 +1,19 @@
 {{ define "content" }}
   <div class="userboxes">
     {{ range $name := .Site.Params.names }}
+    {{ $user := index $.Site.Params $name }} {{/* Get the specific user's parameters */}}
     <div class="userbox selectable">
       <a href="{{ $name | absURL }}">
-        {{ with (index $.Site.Params $name).avatarurl }}
-        <div class="avatar">
-          <img src="{{ . | absURL }}" alt="avatar"></img>
-        </div>
+        {{ with $user.avatarurl }} {{/* Check if avatarurl exists for this user */}}
+          <div class="avatar">
+            {{/* Call the partial, passing a dictionary of parameters */}}
+            {{- partial "avatar-image.html" (dict
+              "imagePath" .
+              "altText" (printf "%s's avatar" $user.author)
+            ) -}}
+          </div>
         {{ end }}
-        <div class="username">{{ (index $.Site.Params $name).author }}</div>
+        <div class="username">{{ $user.author }}</div>
       </a>
     </div>
     {{ end }}
