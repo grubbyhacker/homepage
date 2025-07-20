@@ -215,7 +215,7 @@ a:hover {
   font-size: .75em;
 }
 
-.iooter li:not(:last-child) {
+.footer li:not(:last-child) {
   border-right: 1px solid #ccc;
 }
 
