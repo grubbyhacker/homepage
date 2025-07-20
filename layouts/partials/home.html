@@ -1,31 +1,111 @@
-<div class="userboxes">
-  <div class="userbox">
-    {{ $user := index .Site.Data.users .Section }}
-    {{ if (isset $user "avatarurl") }}
-      <div class="avatar">
-        {{- partial "avatar-image.html" (dict
-          "imagePath" $user.avatarurl
-          "altText" (printf "%s's avatar" $user.author)
-        ) -}}
-      </div>
-    {{ end }}
-    <div class="username">{{ $user.author }}</div>
-    <div class="navlinks">
-    {{ with $user.social }}
-      {{ range sort . "weight" }}
-        {{ if .icon }}
-          <div class="navicon navlink">
-            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
-              <i class="{{ .icon }}" aria-hidden="true"></i>
-            </a>
-          </div>
-        {{ else }}
-          <div class="navtext navlink">
-            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
-          </div>
+<div class="homepage">
+  <div class="userboxes">
+    <div class="userbox">
+      {{ $user := index .Site.Data.users .Section }}
+      <div class="description">{{ $user.description }}</div>
+      {{ if (isset $user "avatarurl") }}
+        <div class="avatar">
+          {{- partial "avatar-image.html" (dict
+            "imagePath" $user.avatarurl
+            "altText" (printf "%s's avatar" $user.author)
+          ) -}}
+        </div>
+      {{ end }}
+      <div class="username">{{ $user.author }}</div>
+
+      <div class="navlinks">
+      {{ with $user.social }}
+        {{ range sort . "weight" }}
+          {{ if .icon }}
+            <div class="navicon navlink">
+              <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+                <i class="{{ .icon }}" aria-hidden="true"></i>
+              </a>
+            </div>
+          {{ else }}
+            <div class="navtext navlink">
+              <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
+            </div>
+          {{ end }}
         {{ end }}
       {{ end }}
-    {{ end }}
-    </div>
+      </div>
   </div>
+  </div>
+      <div id="random-quote-display" class="quote-container">
+        <blockquote>
+          <i class='fas fa-quote-left quote-icon-open'></i>
+          <p class="quote-text">Loading quote...</p>
+          <i class='fas fa-quote-right quote-icon-close'></i>
+        </blockquote>
+        <p class="quote-author"></p>
+    </div>
 </div>
+
+<script>
+  const userQuotesString = {{ $user.quotes | jsonify }};
+  const userQuotes = JSON.parse(userQuotesString);
+
+  const quoteContainer = document.getElementById('random-quote-display');
+  // Removed selectors for first-letter and rest-of-quote spans
+  const quoteTextElement = document.querySelector('#random-quote-display .quote-text'); // This selector will now target the whole blockquote
+  const quoteAuthorElement = document.querySelector('#random-quote-display .quote-author');
+
+  let currentQuoteIndex = 0; // Keep track of the current quote
+
+  function updateQuoteContent(quote) {
+    // Directly set the text content of the blockquote
+    if (quoteTextElement) {
+      quoteTextElement.textContent = quote.text;
+    }
+    if (quoteAuthorElement) {
+      quoteAuthorElement.textContent = `- ${quote.author}`;
+    }
+  }
+
+  function cycleQuote() {
+    if (!userQuotes || userQuotes.length === 0) {
+      console.warn("No quotes found to cycle.");
+      if (quoteContainer) {
+        quoteContainer.innerHTML = '<p>No quotes to display.</p>';
+      }
+      return;
+    }
+
+    // 1. Fade out the current quote
+    if (quoteContainer) {
+      quoteContainer.classList.add('fade-out');
+    }
+
+    // 2. After the fade-out transition completes, change the content and fade back in
+    setTimeout(() => {
+      // Move to the next quote, loop back to start if at the end
+      currentQuoteIndex = (currentQuoteIndex + 1) % userQuotes.length;
+      const selectedQuote = userQuotes[currentQuoteIndex];
+
+      // Update the text content
+      updateQuoteContent(selectedQuote);
+
+      // 3. Remove the fade-out class to fade the new quote in
+      if (quoteContainer) {
+        quoteContainer.classList.remove('fade-out');
+      }
+    }, 500); // This delay should match your CSS transition duration (0.5s = 500ms)
+  }
+
+  // Initial display on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    if (userQuotes && userQuotes.length > 0) {
+      updateQuoteContent(userQuotes[currentQuoteIndex]); // Display the first quote
+    } else {
+      console.warn("No quotes to display on load.");
+      if (quoteContainer) {
+        quoteContainer.innerHTML = '<p>No quotes to display.</p>';
+      }
+    }
+    // Start cycling only if there's more than one quote
+    if (userQuotes.length > 1) {
+      setInterval(cycleQuote, 21000);
+    }
+  });
+</script>

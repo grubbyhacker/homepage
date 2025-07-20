@@ -8,11 +8,11 @@
           <div class="avatar">
             {{- partial "avatar-image.html" (dict
               "imagePath" .
-              "altText" (printf "%s's avatar" $user.author)
+              "altText" (printf "%s's avatar" $user.name)
             ) -}}
           </div>
         {{ end }}
-        <div class="username">{{ $user.author }}</div>
+        <div class="username">{{ $user.name }}</div>
       </a>
     </div>
     {{ end }}

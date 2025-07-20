@@ -4,7 +4,7 @@
     <ul>
     {{ range $name := .Site.Params.names }}
       {{ $user := index $.Site.Data.users $name }}
-      <li><a href="{{ $name | absURL }}">{{ $user.author }}</a></li>
+      <li><a href="{{ $name | absURL }}">{{ $user.name }}</a></li>
     {{ end }}
     </ul>
   </nav>

@@ -1,7 +1,7 @@
 {{ $current_user := index $.Site.Data.users .Section }}
 <div class="header">
   <div class="pagetitle">
-    <a href="{{ .Section | absURL }}">{{ $current_user.description }}</a>
+    <a href="{{ .Section | absURL }}">{{ $current_user.name }}</a>
   </div>
   <nav class="navbar">
     <ul>

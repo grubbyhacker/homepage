@@ -1,6 +1,5 @@
-author: "Roger Fleig"
-info: "Software Engineer"
-description: "Roger Fleig"
+name: "Roger Fleig"
+description: "Spouse, Father, Software Engineer"
 keywords: "blog,engineer,personal"
 avatarurl: "images/roger/avatar.jpeg"
 social:
@@ -12,3 +11,20 @@ social:
     icon: "fab fa-linkedin fa-2x"
     weight: 2
     url: "https://www.linkedin.com/in/rogerfleig/"
+quotes:
+  - author: "Goethe"
+    text: > 
+      The world is so empty if one thinks only of mountains, rivers & cities;
+      but to know someone who thinks & feels with us, & who, though distant, 
+      is close to us in spirit, this makes the earth for us an inhabited garden.
+  - author: "Ernest Hemingway"
+    citation: "Islands in the Stream"
+    text: >
+      He thought that on the ship he could come to some terms with
+      his sorrow, not knowing, yet, that there are no terms to be
+      made with sorrow.
+  - author: "Herman Hesse"
+    citation: "Demian"
+    text: >
+      I live in my dreams — that's what you sense. Other people live
+      in dreams, but not in their own. That's the difference.

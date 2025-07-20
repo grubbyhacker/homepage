@@ -109,6 +109,16 @@ a:hover {
   float: center;
 }
 
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 0 1 em;
+}
+
 .userboxes {
   display: flex;
   flex-wrap: wrap;
@@ -127,6 +137,12 @@ a:hover {
   max-width: 25rem;
   min-width: 10rem;
   height: auto;
+}
+
+.userbox .description {
+  padding: 1em;
+  font-weight: 500;
+  font-size: 2em;
 }
 
 .selectable:hover {
@@ -207,9 +223,6 @@ a:hover {
   margin: auto;
 }
 
-.articlelist {
-}
-
 .articlelist ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -240,4 +253,36 @@ a:hover {
   font-weight: 800;
   font-size: 2em;
   border-bottom: 2px solid #000;
+}
+
+.quote-container {
+    flex: 0 1;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: #faf7f4;
+    font-style: italic;
+    font-size: 1.1em;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.quote-container.fade-out {
+  opacity: 0;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+blockquote {
+	position: relative;
+	font-size: 1rem;
 }

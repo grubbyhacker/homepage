@@ -1,6 +1,5 @@
-author: "Amanda Fleig"
-info: "Quilting wizard"
-description: "Amanda Fleig"
+name: "Amanda Fleig"
+description: "Spouse, Mother, Quilting Wizard"
 keywords: "quilter"
 avatarurl: "images/amanda/avatar.jpeg"
 social:
@@ -8,3 +7,14 @@ social:
     icon: "fab fa-instagram fa-2x"
     weight: 3
     url: "https://www.instagram.com/i_sew_4_my_sanity/"
+quotes:
+  - author: "Jennifer Chiaverini"
+    text: >
+      Anyone who works on a quilt, who devotes her time, energy,
+      creativity, and passion to that art, learns to value the
+      work of her hands. And as any quilter will tell you, a
+      quilter’s quilting friends are some of the dearest, most
+      generous, and most supportive people she knows.
+  - author: "Maya Angelou"
+    text: >
+      You can’t use up creativity. The more you use, the more you have.
