@@ -1,0 +1,4 @@
+services:
+  tests:
+    volumes:
+      - ./tests:/tests:Z

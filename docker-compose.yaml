@@ -1,13 +1,16 @@
-version: '3.8' # Keep this for now, the warning is minor.
+version: "3.8"
+
 services:
-  hugo-dev:
-    build: . # Instructs Compose to build the image from the Dockerfile in the current directory
-    container_name: hugo_dev
-    working_dir: /src
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.hugo
     ports:
       - "1313:1313"
-    # The command is now defined in the Dockerfile's CMD instruction
-    develop:
-      watch:
-        - path: . # Watch the entire current directory on the host
-          action: rebuild # <--- IMPORTANT: Rebuild the image and restart the container on changes
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.playwright
+    depends_on:
+      - web

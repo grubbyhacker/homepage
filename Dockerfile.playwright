@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/playwright:v1.54.1-jammy
+
+WORKDIR /tests
+COPY tests/package*.json ./
+RUN npm install
+# Copy test files into image (used in CI)
+COPY tests/ /tests/
+
+CMD ["npx", "playwright", "test"]

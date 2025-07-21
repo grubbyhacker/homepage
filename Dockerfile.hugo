@@ -1,0 +1,10 @@
+# Dockerfile.hugo
+FROM ghcr.io/gohugoio/hugo:v0.148.1
+
+WORKDIR /site
+COPY . /site
+USER root
+RUN chmod -R a+rX /site
+RUN hugo
+
+CMD ["server", "--bind", "0.0.0.0", "--port", "1313", "--disableFastRender", "--baseURL", "http://web:1313/homepage/"]
