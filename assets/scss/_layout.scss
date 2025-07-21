@@ -1,0 +1,33 @@
+.grid-container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3rem 1fr 3rem;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  align-items: end;
+  width: 100%;
+  height: 4rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--main-bg-color), var(--header-bg-color));
+}
+
+.content {
+  grid-area: content;
+  padding: 1em;
+  float: center;
+}
+
+.footer {
+  grid-area: footer;
+  max-height: 2em;
+}

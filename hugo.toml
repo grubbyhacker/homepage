@@ -7,3 +7,6 @@ disableKinds = ['taxonomy', 'term']
   names = ["amanda", "roger"]
   title = 'Fleig Family Website'
 
+[markup]
+  [markup.sass]
+    outputStyle = "compressed"

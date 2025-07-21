@@ -1,0 +1,32 @@
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: black;
+  background-color: white;
+}
+
+a {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+}
+
+a:hover {
+  border: 2px solid var(--hover-bg-color);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.centered-element {
+  margin: auto;
+}
+
+blockquote {
+  position: relative;
+  font-size: 1rem;
+}

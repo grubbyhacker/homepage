@@ -1,0 +1,139 @@
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 0 1em;
+}
+
+.userboxes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  padding: 1em;
+}
+
+.userbox {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 25rem;
+  min-width: 10rem;
+  height: auto;
+}
+
+.userbox .description {
+  padding: 1em;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.selectable:hover {
+  border: 2px solid var(--hover-bg-color);
+  border-radius: 8px;
+}
+
+.userbox a {
+  text-decoration: none;
+  color: black;
+  border: none;
+  padding: 0;
+}
+
+.username {
+  padding: 0;
+  font-weight: 800;
+  font-size: 2em;
+}
+
+.avatar img {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+  padding: 1em;
+}
+
+.navlinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: 4em;
+  place-items: center;
+  gap: 2em;
+}
+
+.navlink {
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.navlink:hover {
+  border: 2px solid var(--hover-bg-color);
+}
+
+.articlelist ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+}
+
+.articlelist ul li {
+  display: grid;
+  grid-template-columns: 175px 1fr;
+  grid-template-areas: "date title";
+  gap: 0.75em;
+}
+
+.date {
+  grid-area: date;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.title {
+  grid-area: title;
+  padding: 0;
+  font-weight: bold;
+}
+
+.post-title h1.title {
+  font-weight: 800;
+  font-size: 2em;
+  border-bottom: 2px solid #000;
+}
+
+.quote-container {
+  flex: 0 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #faf7f4;
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.quote-container.fade-out {
+  opacity: 0;
+}
+
+.quote-author {
+  text-align: right;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  font-weight: bold;
+}
