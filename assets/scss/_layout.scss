@@ -31,3 +31,24 @@
   grid-area: footer;
   max-height: 2em;
 }
+
+/*
+  For larger screens, make sure that articles don't just spread all the
+  way across the screen. Make it more readable by keeping it centered
+  and smaller.
+*/
+@media (min-width: 768px) { 
+  // For general pages like disclaimer.md
+  .container.page article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+
+  // For blog posts
+  .container.post article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+}
