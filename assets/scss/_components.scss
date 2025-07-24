@@ -67,3 +67,120 @@
 .footer li:not(:last-child) {
   border-right: 1px solid #ccc;
 }
+
+.callout {
+  background-color: #f0f8ff; /* A light, soft blue */
+  border-left: 5px solid #66b3ff; /* A slightly darker, matching blue for the left border */
+  padding: 1rem 1.5rem; /* Padding inside the box */
+  margin: 1.5rem 0; /* Margin above and below the box */
+  border-radius: 4px; /* Slightly rounded corners for a softer look */
+  color: #333; /* Dark gray text for good readability */
+  line-height: 1.6; /* Improve line spacing within the callout */
+  font-size: 0.95em; /* Slightly smaller font size if desired, adjust as needed */
+}
+
+// Specific styling for the 'note' type of callout (if you have other types later)
+.callout.note {
+  // You can add styles here that are specific *only* to a note,
+  // but if the general .callout styles are enough, this can remain empty
+  // or be used for minor tweaks.
+}
+
+// To remove potential extra bottom margin from the last paragraph within the callout
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+// To style the "Note:" part strongly
+.callout strong {
+  color: #0056b3; /* A strong blue for emphasis */
+  font-weight: bold;
+}
+
+.profile-intro-container {
+  display: flex;
+  flex-direction: column; /* Default to column on mobile (stack vertically) */
+  align-items: center; /* Center items horizontally when stacked */
+  gap: 1.5rem; /* Space between image and list */
+  margin-bottom: 2rem; /* Space below this section */
+  // flex-wrap: wrap; /* Not strictly necessary here, but harmless */
+}
+
+.profile-image-wrapper {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.profile-image-wrapper img {
+  max-width: 150px;
+  height: auto;
+ /*border-radius: 50%;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-attributes {
+  flex-grow: 1;
+  width: 100%; /* Important for column direction */
+}
+
+.profile-attributes ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+/* Desktop-specific styles for side-by-side layout, LEFT ALIGNED */
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  .profile-intro-container {
+    flex-direction: row; /* Switch to row on desktop (side-by-side) */
+    align-items: center; /* Align items to the top of the container */
+    // Remove justify-content: center; and the max-width/margin auto for left alignment
+    // We will let this container fill the width of its parent for left alignment.
+    // If the parent has its own max-width (like .container.page article),
+    // this flex container will align to the left within that.
+  }
+
+  .profile-image-wrapper {
+    margin-right: 2rem; /* Space between image and list on desktop */
+  }
+
+  .profile-attributes {
+    // No specific width needed here, flex-grow will make it fill remaining space
+    width: auto; /* Override the 100% from mobile */
+  }
+}
+
+.resume-role-line {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Pushes items to opposite ends */
+  align-items: baseline; /* Align by text baseline for clean look */
+  gap: 1rem; /* Space between title and dates, preventing overlap */
+  margin-top: 0.5rem; /* Space above each role line */
+  margin-bottom: 0.25rem; /* Space below each role line, adjust as needed */
+  flex-wrap: wrap; /* Allow wrapping on very small screens if necessary */
+}
+
+.resume-role-line .role-title {
+  font-weight: bold; /* Make the title stand out */
+  flex-shrink: 1; /* Allow title to shrink if space is tight */
+  min-width: 0; /* Important for flex-shrink to work properly */
+}
+
+.resume-role-line .role-dates {
+  flex-shrink: 0; /* Prevent dates from shrinking */
+  font-family: monospace; /* Optional: A fixed-width font for dates can look good */
+  white-space: nowrap; /* Keep dates on one line, prevent breaking */
+  text-align: right; /* Ensure dates align to the right within their span */
+  color: #555; /* Slightly muted color for dates (optional) */
+}
+
+/* Optional: Adjust for very small screens if wrapping causes issues */
+@media (max-width: 480px) {
+  .resume-role-line {
+    flex-direction: column; /* Stack them vertically on very small screens */
+    align-items: flex-start; /* Left-align when stacked */
+  }
+  .resume-role-line .role-dates {
+    text-align: left; /* Align dates to the left when stacked */
+  }
+}

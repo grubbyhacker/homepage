@@ -4,37 +4,45 @@ date = 2024-10-16T15:50:08-07:00
 draft = false
 +++
 # About Me
-![Avatar Image](headshot.jpeg)
-- **Expert Software Development Leadership:** Possessing over two and a half decades of experience, I excel at optimizing developer productivity, efficiency, and effectiveness, ultimately enabling engineers to deliver exceptional customer value. My strategic investments in technology and processes are guided by a deep understanding of developers' needs and a shared passion for well-crafted code and superior tools.
-- **High-Performing Team Builder:** Recognized for my ability to cultivate and retain highly skilled technical teams that consistently deliver outstanding return on investment. Proven success in managing both senior technical talent and junior talent, fostering growth and maintaining a robust bench. Managed team sizes up to 100 with broader influence.
-- **Thrives in Complexity:** Frequently sought after to provide solutions to intricate software engineering problems, including those involving artificial intelligence and very large scale data management. Capable of managing immense complexity and handling multiple large projects concurrently. Many projects cited below were/are overlapping.
-- **Effective Communicator:** Skilled in seamlessly engaging with senior executives, business leaders, partners, customers, engineers, and academics, effectively bridging communication gaps and fostering a collaborative environment. 
-- **Principled Leadership:** Guided by a strong commitment to leaving a positive and lasting impact on organizations. Consistently challenges teams to think holistically and implement solutions at the team, division, company, or industry level. Dedicated to ensuring that improvements are sustained and supported.
+{{< profile-intro
+    image="headshot.jpeg"
+    alt="Roger's headshot"
+>}}
+* **Expert Software Development Leadership:** Possessing over two and a half decades of experience, I excel at optimizing developer productivity, efficiency, and effectiveness, ultimately enabling engineers to deliver exceptional customer value. My strategic investments in technology and processes are guided by a deep understanding of developers' needs and a shared passion for well-crafted code and superior tools.
+* **High-Performing Team Builder:** Recognized for my ability to cultivate and retain highly skilled technical teams that consistently deliver outstanding return on investment. Proven success in managing both senior technical talent and junior talent, fostering growth and maintaining a robust bench. Managed team sizes up to 100 with broader influence.
+* **Thrives in Complexity:** Frequently sought after to provide solutions to intricate software engineering problems, including those involving artificial intelligence and very large scale data management. Capable of managing immense complexity and handling multiple large projects concurrently. Many projects cited below were/are overlapping.
+* **Effective Communicator:** Skilled in seamlessly engaging with senior executives, business leaders, partners, customers, engineers, and academics, effectively bridging communication gaps and fostering a collaborative environment. 
+* **Principled Leadership:** Guided by a strong commitment to leaving a positive and lasting impact on organizations. Consistently challenges teams to think holistically and implement solutions at the team, division, company, or industry level. Dedicated to ensuring that improvements are sustained and supported.
+{{< /profile-intro >}}
 
 # Work Experience
 
 ## *Crusoe.ai \- San Francisco, CA*
-**Senior Director of Engineering  Dec 2024 \- Present**  
+{{< resume-role title="Senior Director of Engineering" dates="Dec 2024 - Present" >}}
 Leading change at a climate aligned AI startup.
+
+{{<note>}}
+**Note:**  The dates on these roles at Google overlap because I did many of them simultaneously.
+{{</note>}}
 
 ## *Google Inc - Sunnyvale, CA \- Core Machine Learning, Technical Infrastructure*
 
-**Director of Engineering	May 2021 \- Nov 2024**  
+{{< resume-role title="Director of Engineering"	dates="May 2021 - Nov 2024" >}}
 Core ML creates foundational infrastructure, services and code frameworks that power machine learning across all Google products. Built and led a team of 40 engineers. Contributed to TensorFlow, Jax, XLA, eval systems, high scale release infrastructure, and making it easy for Google engineers to integrate ML into products. Launched the first Google-wide LLM based developer solution that automates required code review steps. Worked closely with Google Deep Mind and other research teams to deliver critical infrastructure to all Gemini model developers and users at Google. Examples: [blogpost](https://blog.research.google/2023/05/large-sequence-models-for-software.html)
 
 ## *Google Inc \- Sunnyvale, CA \- Vertex AI, Google Cloud Platform*
 
-**Director of Engineering	Aug 2023 \- Present**	  
+{{< resume-role title="Director of Engineering" dates="Aug 2023 - Present" >}} 
 Vertex AI offers everything you need to build and use generative AI—from AI solutions, to Search and Conversation, to 130+ foundation models, to a unified AI platform. Led a team of 20 engineers to automate and safeguard model releases at scale (LLM, Foundational, Gemini). Pioneered evaluation technologies that became standards across Google model development.
 
 ## *Google Inc \- Sunnyvale, CA \- Core Data Infrastructure*
 
-**Director of Engineering	Jul 2019 \- Jun 2023**  
+{{< resume-role title="Director of Engineering"	dates="Jul 2019 - Jun 2023" >}}
 Core Data’s mission is to unlock the power of Google’s data – by enabling product teams to build the next generation of data driven innovations for end-users. The Core Data product suite offers end-to-end data management solutions, infrastructure, and foundations for Google products operating at planet-scale, including flagship products such as Search, Ads, YouTube, and Geo. Immersed in some of the most Google parts of Google (Search backend and logs collection), led multiple initiatives to address code health, technical debt, and overall engineering excellence, resulting in a significant improvement in the quality, maintainability, and efficiency of the codebase.
 
 ## *Google Inc \- Sunnyvale, CA \- Google-wide Code Health, Configuration and Reliability*
 
-**Director of Engineering	Oct 2012 \- Jun 2023**  
+{{< resume-role title="Director of Engineering"	dates="Oct 2012 - Jun 2023" >}}
 Created and led a dedicated team responsible for developing innovative tools tailored for internal software developers. At the core of these tools was the provision of timely and relevant information, a crucial element in enhancing workflow efficiency and aiding in effective decision making. Impact was substantial and spanned numerous years \- touching nearly every single engineer at Google, eliminating entire classes of outages and enabling Google’s code base to scale. Elevated the importance of configuration at Google by treating it on par with source code: rigorous testing, validation, analysis and integration with developer surfaces. My efforts contributed to a more robust and scalable software development environment, fostering collaboration and ensuring the delivery of high-quality software. Examples: 
 - [Mutation Testing](https://conf.researchr.org/details/icse-2021/icse-2021-papers/70/Does-mutation-testing-improve-testing-practices-)
 - [Code Deletion at Scale](https://testing.googleblog.com/2023/04/sensenmann-code-deletion-at-scale.html)
@@ -42,32 +50,32 @@ Created and led a dedicated team responsible for developing innovative tools tai
 
 ## *Google Inc \- Mountain View, CA \- Google Shopping*
 
-**Director of Engineering	May 2012 \- Jul 2019**  
+{{< resume-role title="Director of Engineering"	dates="May 2012 - Jul 2019" >}}
 Delivered organic and ads experiences, consumer and partner facing, for example: Shopping Ads (PLA), Google Shopping, Shopping organic shopping units in Search, and Merchant Center. Stakeholder management, innovative productivity solutions, leadership.
 
 ## *Google Inc \- Mountain View, CA \- Google Analytics*
 
-**Senior Engineering Manager	Sep 2015 \- Mar 2017**  
+{{< resume-role title="Senior Engineering Manager"	dates="Sep 2015 - Mar 2017" >}}
 Innovated around legacy code base, one of the largest data stores in existence, strategic product infrastructure turnaround, hiring and staffing.
 
 ## *Google Inc \- Mountain View, CA \- Adwords, Advertiser Platform*
 
-**Senior Engineering Manager	Apr 2011 \- Jun 2014**  
+{{< resume-role title="Senior Engineering Manager" dates="Apr 2011 - Jun 2014" >}}
 Solved long standing developer velocity problems slowing down AdWords UI innovation. Matrix organization, distributed leadership, team building.
 
 ## *Microsoft Corporation \- Bellevue, WA \- Microsoft Advertising*
 
-**Principal Test Manager	June 2009 \- March 2011**  
+{{< resume-role title="Principal Test Manager" dates="June 2009 - March 2011" >}}
 ML operations, reliability, live site troubleshooting, developer focused innovation, team building.
 
 ## *Microsoft Corporation \- Redmond, WA \- SQL Server*
 
-**Principal Test Manager	May 2000 \- June 2009**  
+{{< resume-role title="Principal Test Manager"	dates="May 2000 - June 2009" >}}
 XMLQuery, XML storage/retrieval, XML Schema, Query Processing, Query Optimization, 	SQL, File Systems, Customer engagement.
 
 ## *Microsoft Corporation \- Redmond, WA \- Exchange Server*
 
-**SDET, SDET Lead, Test Manager	Jan 1998 \- May 2000**  
+{{< resume-role title="SDET, SDET Lead, Test Manager" dates="Jan 1998 - May 2000" >}}
 MCIS, Internet Protocols, Exchange Server 5.5 & 2000\.
 
 # Sponsored Publications

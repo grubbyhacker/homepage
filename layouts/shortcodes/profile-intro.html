@@ -1,0 +1,8 @@
+<div class="profile-intro-container">
+    <div class="profile-image-wrapper">
+        <img src="{{ .Get "image" }}" alt="{{ .Get "alt" | default "Profile image" }}">
+    </div>
+    <div class="profile-attributes">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
