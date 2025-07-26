@@ -1,3 +1,6 @@
+{{ define "title" }}
+  {{- i18n (lower .Title) | default .Title | title -}} · {{ .Site.Title }}
+{{ end }}
 {{ define "content" }}
   <div class="articlelist">
     <h1 class="title">{{- i18n (lower .Title) | default .Title | title -}}</h1>
@@ -8,7 +11,7 @@
       {{ if .IsPage }}
       <li>
         <div class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</div>
-        <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
+        <a class="listed-title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
       </li>
       {{ end }}
       {{ end }}

@@ -1,0 +1,33 @@
+.resume-role-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.resume-role-line .role-title {
+  font-weight: bold;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.resume-role-line .role-dates {
+  flex-shrink: 0;
+  font-family: monospace;
+  white-space: nowrap;
+  text-align: right;
+  color: #555;
+}
+
+@media (max-width: 480px) {
+  .resume-role-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .resume-role-line .role-dates {
+    text-align: left;
+  }
+}

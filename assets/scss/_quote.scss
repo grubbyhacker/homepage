@@ -1,0 +1,26 @@
+.quote-container {
+  flex: 0 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #faf7f4;
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.quote-container.fade-out {
+  opacity: 0;
+}
+
+.quote-author {
+  text-align: right;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  font-weight: bold;
+}

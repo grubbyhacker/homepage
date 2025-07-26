@@ -1,9 +1,9 @@
 +++
-title = ""
+title = "About Me"
 date = 2024-10-16T15:50:08-07:00
 draft = false
 +++
-# About Me
+
 {{< profile-intro
     image="headshot.jpeg"
     alt="Roger's headshot"

@@ -14,9 +14,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: column;
-  align-items: end;
+  align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   font-weight: bold;
   background: linear-gradient(to right, var(--main-bg-color), var(--header-bg-color));
 }
@@ -50,5 +50,10 @@
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1.5rem;
+  }
+
+  .header {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }

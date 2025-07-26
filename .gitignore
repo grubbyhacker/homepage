@@ -7,3 +7,4 @@ resources/
 test-results/
 tests/node_modules/
 tests/playwright-report/
+.vscode

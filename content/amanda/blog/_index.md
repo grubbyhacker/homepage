@@ -1,4 +1,4 @@
 +++
 type = "blog"
-title = "Mandy's Random Musings"
+title = "Mandy's Musings"
 +++
