@@ -6,6 +6,7 @@ disableKinds = ['taxonomy', 'term']
 [Params]
   names = ["amanda", "roger"]
   title = 'Fleig Family Website'
+  debug = false
 
 [markup]
   [markup.sass]

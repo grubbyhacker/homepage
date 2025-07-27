@@ -10,7 +10,10 @@
     {{ $scss := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.Integrity }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
-</head>
+    {{ print "<!-- Debug info only available when HUGO_PARAMS_DEBUG=true -->" | safeHTML }}
+    {{ partial "debug/meta-tags.html" .Page }}
+    {{ print "<!-- End debug info -->" | safeHTML -}}
+  </head>
 <body>
   <div class="grid-container">
     {{ if or .IsHome (eq .Slug "disclaimer") }}
@@ -19,7 +22,8 @@
         {{ partial "header/section-header.html" . }}
     {{ end }}
     <div class="content">
-       {{ block "content" . }}{{ end }}
+      {{ partial "debug/printf.html" . }}
+      {{ block "content" . }}{{ end }}
     </div>
     {{ partial "footer.html" . }}
   </div>
