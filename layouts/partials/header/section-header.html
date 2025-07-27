@@ -5,8 +5,8 @@
   </div>
   <nav class="navbar">
     <ul>
-      <li class="{{ if hasSuffix .Permalink "/about/" }}active{{ end }}"><a class="sitelink-quiet" href="{{ .Section | absURL}}/about">About</a></li>
-      <li class="{{ if hasSuffix .Permalink "/blog/" }}active{{ end }}"><a class="sitelink-quiet" href="{{ .Section | absURL}}/blog">Blog</a></li>
+      <li class="{{ if hasSuffix .Permalink "/about/" }}active{{ end }}"><a class="sitelink sitelink-quiet" href="{{ .Section | absURL}}/about">About</a></li>
+      <li class="{{ if hasSuffix .Permalink "/blog/" }}active{{ end }}"><a class="sitelink sitelink-quiet" href="{{ .Section | absURL}}/blog">Blog</a></li>
       {{ if $current_user.email }}
       <li><a href="mailto:{{ $current_user.email }}">Contact</a></li>
       {{ end }}

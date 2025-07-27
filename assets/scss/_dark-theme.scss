@@ -1,0 +1,74 @@
+body.dark-theme {
+    color: var(--dark-text-color);
+    background-color: var(--dark-main-bg-color);
+}
+
+body.dark-theme a.sitelink {
+    color: var(--dark-site-link-color);
+}
+
+.sitelink:hover {
+  border: 2px solid var(--dark-hover-bg-color);
+}
+
+body.dark-theme div.header {
+    background: linear-gradient(to right, var(--dark-main-bg-color), var(--dark-header-bg-color));
+}
+
+body.dark-theme .username {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme .userbox a {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme .navbar ul li.active {
+  background-color: var(--dark-main-bg-color);
+}
+
+body.dark-theme .quote-container {
+  background-color: var(--dark-quote-bg-color);
+  border: 1px solid var(--dark-quote-border-color);
+  color: var(--dark-quote-author-text-color);
+}
+
+body.dark-theme .quote-author {
+  color: var(--dark-quote-author-text-color);
+}
+
+body.dark-theme pre {
+    background-color: var(--dark-code-background-color);
+    border: 1px solid var(--dark-pre-border-color);
+}
+
+body.dark-theme code {
+    background-color: var(--dark-code-background-color);
+}
+
+body.dark-theme a {
+    color: var(--dark-hyperlink-color);
+}
+
+body.dark-theme .title {
+    border-bottom: 2px solid var(--dark-article-title-accent-color);
+    color: var(--dark-article-title-color);
+}
+
+body.dark-theme .callout {
+  background-color: var(--dark-callout-bg-color);
+  border-left: 5px solid var(--dark-callout-left-border-color);
+  color: var(--dark-callout-text-color);
+}
+
+body.dark-theme .callout strong {
+  color: var(--dark-callout-strong-color);
+}
+
+body.dark-theme .profile-intro-container strong {
+  color: var(--dark-highlight-color);
+}
+
+.resume-role-line .role-dates {
+  color: var(--dark-resume-role-line-text-color);
+}

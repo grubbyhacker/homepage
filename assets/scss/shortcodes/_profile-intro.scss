@@ -4,6 +4,11 @@
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  font-size: .8em;
+}
+
+.profile-intro-container strong {
+  color: var(--highlight-color);
 }
 
 .profile-image-wrapper {
