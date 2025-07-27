@@ -6,7 +6,7 @@ body {
   background-color: white;
 }
 
-a {
+.sitelink {
   border: 2px solid transparent;
   border-radius: 8px;
   text-decoration: none;
@@ -14,7 +14,15 @@ a {
   color: black;
 }
 
-a:hover {
+.sitelink-quiet {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+}
+
+.sitelink:hover {
   border: 2px solid var(--hover-bg-color);
 }
 
@@ -29,4 +37,34 @@ a:hover {
 blockquote {
   position: relative;
   font-size: 1rem;
+}
+
+pre {
+  background-color: #eee;
+  padding: 1em;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: monospace; 
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  word-wrap: break-word;
+}
+
+pre code {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+H1 {
+  font-size: 2em;
+}
+
+H2 {
+  font-size: 1.5em;
 }

@@ -1,4 +1,4 @@
-{{ if .Site.Params.debug }}
+{{ if hugo.IsServer }}
 
 <meta name="hugo-bundle-type" content="{{ .BundleType }}" />
 <meta name="hugo-categories" content="{{ .Params.categories }}" />

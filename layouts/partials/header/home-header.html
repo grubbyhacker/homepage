@@ -1,10 +1,10 @@
 <div class="header">
-  <div class="pagetitle"> <a href="{{ "" | absURL }}">{{ .Site.Params.title }}</a></div>
+  <div class="pagetitle"> <a class="sitelink" href="{{ "" | absURL }}">{{ .Site.Params.title }}</a></div>
   <nav class="navbar">
     <ul>
     {{ range $name := .Site.Params.names }}
       {{ $user := index $.Site.Data.users $name }}
-      <li><a href="{{ $name | absURL }}">{{ $user.nickname }}</a></li>
+      <li><a class="sitelink-quiet" href="{{ $name | absURL }}">{{ $user.nickname }}</a></li>
     {{ end }}
     </ul>
   </nav>

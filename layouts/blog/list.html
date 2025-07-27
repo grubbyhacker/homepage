@@ -1,9 +1,6 @@
-{{ define "title" }}
-  {{- i18n (lower .Title) | default .Title | title -}} · {{ .Site.Title }}
-{{ end }}
 {{ define "content" }}
   <div class="articlelist">
-    <h1 class="title">{{- i18n (lower .Title) | default .Title | title -}}</h1>
+    <h1 class="title">{{- .Title -}}</h1>
     <ul>
     {{ $userFilteredBlogPath := printf "/%s/blog" .Section }}
     {{ range where .Site.Pages "Type" "blog" }}
