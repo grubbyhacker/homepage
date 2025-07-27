@@ -8,11 +8,11 @@ draft = false
     image="headshot.jpeg"
     alt="Roger's headshot"
 >}}
-* **Expert Software Development Leadership:** Possessing over two and a half decades of experience, I excel at optimizing developer productivity, efficiency, and effectiveness, ultimately enabling engineers to deliver exceptional customer value. My strategic investments in technology and processes are guided by a deep understanding of developers' needs and a shared passion for well-crafted code and superior tools.
-* **High-Performing Team Builder:** Recognized for my ability to cultivate and retain highly skilled technical teams that consistently deliver outstanding return on investment. Proven success in managing both senior technical talent and junior talent, fostering growth and maintaining a robust bench. Managed team sizes up to 100 with broader influence.
-* **Thrives in Complexity:** Frequently sought after to provide solutions to intricate software engineering problems, including those involving artificial intelligence and very large scale data management. Capable of managing immense complexity and handling multiple large projects concurrently. Many projects cited below were/are overlapping.
-* **Effective Communicator:** Skilled in seamlessly engaging with senior executives, business leaders, partners, customers, engineers, and academics, effectively bridging communication gaps and fostering a collaborative environment. 
-* **Principled Leadership:** Guided by a strong commitment to leaving a positive and lasting impact on organizations. Consistently challenges teams to think holistically and implement solutions at the team, division, company, or industry level. Dedicated to ensuring that improvements are sustained and supported.
+* **Expert Software Development Leadership:** Excels at optimizing developer productivity, efficiency, and effectiveness, enabling engineers to deliver exceptional customer value. Guided by a deep understanding of developer needs and a shared passion for well-crafted code and superior tools.
+* **High-Performing Team Builder:** Recognized for ability to cultivate and retain highly skilled technical talent, consistently delivers outstanding ROI.
+* **Thrives in Complexity:** Frequently sought after to provide solutions to intricate software engineering problems, including those involving AI and scale.
+* **Effective Communicator:** Seamlessly engages with senior executives, business leaders, partners, customers, engineers, and academics.
+* **Principled Leadership:** Guided by a strong commitment to leaving a positive and lasting impact on organizations.
 {{< /profile-intro >}}
 
 # Work Experience

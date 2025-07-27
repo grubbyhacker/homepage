@@ -11,6 +11,10 @@
   color: var(--highlight-color);
 }
 
+.profile-intro-container li {
+  margin-bottom: .6em;
+}
+
 .profile-image-wrapper {
   flex-shrink: 0;
   text-align: center;
