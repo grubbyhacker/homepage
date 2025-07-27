@@ -4,12 +4,12 @@
   max-width: 400px;
   padding: 1em;
   box-sizing: border-box;
-  background-color: #faf7f4;
+  background-color: var(--quote-bg-color);
   font-style: italic;
   font-size: 1.1em;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-  border: 1px solid #ccc;
+  border: 1px solid var(--quote-border-color);
   border-radius: 8px;
 }
 
@@ -20,7 +20,7 @@
 .quote-author {
   text-align: right;
   font-size: 0.9em;
-  color: #555;
+  color: var(--quote-author-text-color);
   margin-top: 5px;
   font-weight: bold;
 }

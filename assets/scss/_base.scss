@@ -2,8 +2,8 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1em;
   font-weight: 300;
-  color: black;
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
 }
 
 .sitelink {
@@ -11,7 +11,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   padding: 1em;
-  color: black;
+  color: var(--site-link-color);
 }
 
 .sitelink-quiet {
@@ -19,7 +19,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   padding: 1em;
-  color: black;
+  color: var(--site-link-quiet-color);
 }
 
 .sitelink:hover {
@@ -40,9 +40,9 @@ blockquote {
 }
 
 pre {
-  background-color: #eee;
+  background-color: var( --pre-background-color);
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid var(--pre-border-color);
   overflow-x: auto;
   white-space: pre-wrap;
 }
@@ -50,7 +50,7 @@ pre {
 code {
   font-family: monospace; 
   font-size: 0.9em;
-  background-color: #f0f0f0;
+  background-color: var(--code-background-color);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   word-wrap: break-word;

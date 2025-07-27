@@ -19,7 +19,7 @@
   font-family: monospace;
   white-space: nowrap;
   text-align: right;
-  color: #555;
+  color: var(--resume-role-line-text-color);
 }
 
 @media (max-width: 480px) {

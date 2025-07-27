@@ -1,10 +1,10 @@
 .callout {
-  background-color: #f0f8ff;
-  border-left: 5px solid #66b3ff;
+  background-color: var(--callout-bg-color);
+  border-left: 5px solid var(--callout-left-border-color);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   border-radius: 4px;
-  color: #333;
+  color: var(--callout-text-color);
   line-height: 1.6;
   font-size: 0.95em;
 }
@@ -14,6 +14,6 @@
 }
 
 .callout strong {
-  color: #0056b3;
+  color: var(--callout-strong-color);
   font-weight: bold;
 }
