@@ -1,22 +1,35 @@
-  <div class="select">
-    <select class="select__input" id="selTheme">
-      <option value="">Light</option>
-      <option value="dark-theme">Dark</option>
-    </select>
-  </div>
+<div class="select">
+  <select class="select__input" id="selTheme">
+    <option value="light-theme">Light</option>
+    <option value="dark-theme">Dark</option>
+  </select>
+</div>
 <script>
     function applyTheme(theme) {
-        document.body.className = '';
-        document.body.className = theme;
+      
+      /* This bit of overkill is an attempt to git rid
+         of screen flicker when traversing the site in
+         dark-mode.
+      */
+      document.body.classList.add("loading");
+
+      document.body.classList.remove("dark-theme", "light-theme");
+      document.body.classList.add(theme);
+      
+      document.documentElement.classList.remove("dark-theme", "light-theme");
+      document.documentElement.classList.add(theme);
+
+      document.body.classList.remove("loading");
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      
         const savedTheme = localStorage.getItem("theme");
         
         applyTheme(savedTheme);
 
         for (const optionElement of document.querySelectorAll("#selTheme option")) {
-        optionElement.selected = savedTheme === optionElement.value;
+          optionElement.selected = savedTheme === optionElement.value;
         }
 
         document.querySelector("#selTheme").addEventListener("change", function() {

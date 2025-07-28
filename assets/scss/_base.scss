@@ -6,6 +6,20 @@ body {
   background-color: var(--main-bg-color);
 }
 
+body.loading {
+  visibility: hidden;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 2em;
+
+  color: var(--text-color);
+  background-color: var(--main-accent-color);
+  margin-right: 1em;
+}
+
 .sitelink {
   border: 2px solid transparent;
   border-radius: 8px;
