@@ -45,12 +45,17 @@ blockquote {
   font-size: 1rem;
 }
 
+pre, code {
+  white-space: pre-wrap; /* Preserves whitespace and wraps lines as needed */
+  word-wrap: break-word; /* Breaks long words that would otherwise overflow */
+  overflow-wrap: break-word; /* Modern equivalent of word-wrap */
+  overflow-x: auto; /* Adds horizontal scrollbar if content exceeds available width */
+}
+
 pre {
   background-color: var( --pre-background-color);
   padding: 1em;
   border: 1px solid var(--pre-border-color);
-  overflow-x: auto;
-  white-space: pre-wrap;
 }
 
 code {
@@ -59,12 +64,6 @@ code {
   background-color: var(--code-background-color);
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  word-wrap: break-word;
-}
-
-pre code {
-  font-family: monospace;
-  font-size: 0.9em;
 }
 
 H1 {

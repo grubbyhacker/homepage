@@ -24,12 +24,16 @@
 .content {
   grid-area: content;
   padding: 1em;
-  float: center;
 }
 
 .footer {
   grid-area: footer;
   max-height: 2em;
+}
+
+.container.post article {
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 /*
