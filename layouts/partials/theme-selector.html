@@ -1,0 +1,27 @@
+  <div class="select">
+    <select class="select__input" id="selTheme">
+      <option value="">Light</option>
+      <option value="dark-theme">Dark</option>
+    </select>
+  </div>
+<script>
+    function applyTheme(theme) {
+        document.body.className = '';
+        document.body.className = theme;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme");
+        
+        applyTheme(savedTheme);
+
+        for (const optionElement of document.querySelectorAll("#selTheme option")) {
+        optionElement.selected = savedTheme === optionElement.value;
+        }
+
+        document.querySelector("#selTheme").addEventListener("change", function() {
+        localStorage.setItem("theme", this.value);
+        applyTheme(this.value);
+        })
+    });
+</script>

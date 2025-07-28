@@ -3,6 +3,9 @@
   <div class="pagetitle">
     <a class="sitelink" href="{{ .Section | absURL }}">{{ $current_user.name }}</a>
   </div>
+
+  {{ partial "theme-selector.html" }}
+
   <nav class="navbar">
     <ul>
       <li class="{{ if hasSuffix .Permalink "/about/" }}active{{ end }}"><a class="sitelink sitelink-quiet" href="{{ .Section | absURL}}/about">About</a></li>

@@ -1,5 +1,8 @@
 <div class="header">
   <div class="pagetitle"> <a class="sitelink" href="{{ "" | absURL }}">{{ .Site.Params.title }}</a></div>
+ 
+  {{ partial "theme-selector.html" }}
+ 
   <nav class="navbar">
     <ul>
     {{ range $name := .Site.Params.names }}
@@ -8,4 +11,5 @@
     {{ end }}
     </ul>
   </nav>
+
 </div>
