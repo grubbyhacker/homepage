@@ -1,0 +1,43 @@
+/* Dark theme — override semantics using Catppuccin Mocha */
+:root.dark-theme {
+  --bg: var(--ctp-base);
+  --bg-alt: var(--ctp-surface1);
+  --text: var(--ctp-text);
+  --highlight: var(--ctp-rosewater);
+  --background-invert: #fff;
+  --text-muted: var(--ctp-overlay2);
+  --muted: var(--ctp-overlay2);
+  --border: var(--ctp-surface2);
+  --border-strong: var(--ctp-flamingo);
+
+  --link: var(--ctp-blue);
+  --link-visited: var(--ctp-mauve);
+  --link-hover: var(--ctp-sapphire);
+
+  --sitelink: var(--ctp-lavender);
+  --hr: var(--ctp-surface1);
+  --accent: var(--ctp-blue);
+  --accent-contrast: #0f1012;
+
+  --header-bg: var(--ctp-mantle);
+  --hover-bg: var(--ctp-peach);
+  --card-bg: var(--ctp-surface0);
+  --code-bg: #464444;
+  --pre-bg: var(--ctp-surface0);
+  --pre-border: #939090;
+
+  --quote-bg: var(--ctp-surface1);
+  --quote-border: var(--ctp-surface2);
+  --quote-author: var(--ctp-subtext1);
+
+  --callout-bg: var(--ctp-overlay0);
+  --callout-left: var(--ctp-sapphire);
+  --callout-text: var(--ctp-rosewater);
+  --callout-strong: var(--ctp-blue);
+
+  --resume-role-line: var(--ctp-rosewater);
+
+  /* inverted glyphs swap */
+  --invert-bg: var(--text);
+  --invert-fg: var(--bg);
+}

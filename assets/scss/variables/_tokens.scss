@@ -1,0 +1,43 @@
+/* Light theme (defaults on :root) */
+:root {
+  /* core */
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #111111;
+  --highlight: #111111;
+  --background-invert: #111;
+  --text-muted: #666;
+  --muted: #555555;
+  --border: #e5e5e5;
+  --border-strong: #0056b3;
+  --link: #0056b3;
+  --link-visited: #551a8b;
+  --link-hover: #004c99;
+  --sitelink: black;
+  --hr: #000000;
+  --accent: lightgray;
+  --accent-contrast: #0f1012;
+
+  /* components */
+  --header-bg: #F9EBE0;
+  --hover-bg: lightgrey;
+  --card-bg: #f0f8ff;
+  --code-bg: #f0f0f0;
+  --pre-bg: #eeeeee;
+  --pre-border: #cccccc;
+
+  --quote-bg: #faf7f4;
+  --quote-border: #cccccc;
+  --quote-author: #555555;
+
+  --callout-bg: #f0f8ff;
+  --callout-left: #66b3ff;
+  --callout-text: #333333;
+  --callout-strong: #0056b3;
+
+  --resume-role-line: var(--text);
+
+  /* inverted glyph (first-letter, pills, etc.) */
+  --invert-bg: #000000;
+  --invert-fg: #ffffff;
+}

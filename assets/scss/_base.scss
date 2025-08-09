@@ -2,21 +2,35 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1em;
   font-weight: 300;
-  color: var(--text-color);
-  background-color: var(--main-bg-color);
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 body.loading {
   visibility: hidden;
 }
 
+a {
+  color: var(--link);
+  text-decoration: underline;
+
+  &:visited {
+    color: var(--link-visited);
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--link-hover);
+  }
+}
+
 select {
   padding: 8px;
-  border: 1px solid var(--main-bg-color);
+  border: 1px solid var(--bg);
   border-radius: 2em;
 
-  color: var(--text-color);
-  background-color: var(--main-accent-color);
+  color: var(--text);
+  background-color: var(--bg-alt);
   margin-right: 1em;
 }
 
@@ -25,11 +39,15 @@ select {
   border-radius: 8px;
   text-decoration: none;
   padding: 1em;
-  color: var(--site-link-color);
+  color: var(--sitelink);
+
+  &:visited {
+    color: var(--sitelink);
+  }
 }
 
 .sitelink:hover {
-  border: 2px solid var(--hover-bg-color);
+  border: 2px solid var(--border-strong);
 }
 
 .invisible {
@@ -53,15 +71,15 @@ pre, code {
 }
 
 pre {
-  background-color: var( --pre-background-color);
+  background-color: var( --pre-bg);
   padding: 1em;
-  border: 1px solid var(--pre-border-color);
+  border: 1px solid var(--pre-border);
 }
 
 code {
   font-family: monospace; 
   font-size: 0.9em;
-  background-color: var(--code-background-color);
+  background-color: var(--code-bg);
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }

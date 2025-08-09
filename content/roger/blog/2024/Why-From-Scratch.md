@@ -3,9 +3,9 @@ date = 2024-10-16T11:52:07-07:00
 title = 'Why From Scratch'
 description = "Who builds websites from 'scratch' in 2024?"
 draft = false
-tags = [ "webdev", "learning"]
+tags = [ "webdev", "learning", "hugo"]
 series = []
-type = "blog"
+layout = "blog/single"
 author = "roger"
 +++
 

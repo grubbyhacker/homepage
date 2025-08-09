@@ -1,14 +1,24 @@
 {{ define "content" }}
 
-<div class="term">  {{/* reuse the centered container */}}
+<div class="term">
   <header class="term__header">
     <h1 class="term__title">{{ .Title }}</h1>
-    {{ with .Content }}
-      <div class="term__intro">{{ . }}</div>
+    {{ with .Params.tagline }}
+      <p class="term__tagline">{{ . }}</p>
     {{ end }}
   </header>
 
   <hr class="term__rule"/>
+
+  {{ if .Content }}
+    <div class="term__intro">
+      {{ .Content }}
+    </div>
+  {{ else if .Description }}
+    <div class="term__intro">
+      <p>{{ .Description }}</p>
+    </div>
+  {{ end }}
 
   <section class="term__posts">
     {{ range .Pages.ByDate.Reverse }}
@@ -20,18 +30,10 @@
             {{ end }}
           </div>
         {{ end }}
-
-        <div class="post-meta">
-          <time class="post-date" datetime="{{ .Date }}">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</time>
-          <span class="post-spacer"></span>
-          <span class="post-reading-time">{{ .ReadingTime }} min read</span>
-        </div>
-
         <h2 class="term-post__title">
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h2>
 
-        {{/* Summary/description logic */}}
         {{ $desc := "" }}
         {{ if .Params.description }}
           {{ $desc = .Params.description }}
@@ -40,10 +42,15 @@
         {{ else if .Content }}
           {{ $desc = (.Plain | truncate 180) }}
         {{ end }}
+
         {{ if $desc }}
           <p class="term-post__desc">{{ $desc }}</p>
         {{ end }}
       </article>
+    {{ end }}
+
+    {{ if not (gt (len .Pages) 0) }}
+      <p class="term__empty">No posts yet.</p>
     {{ end }}
   </section>
 </div>

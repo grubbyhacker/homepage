@@ -32,7 +32,7 @@ Core ML creates foundational infrastructure, services and code frameworks that p
 
 ## *Google Inc \- Sunnyvale, CA \- Vertex AI, Google Cloud Platform*
 
-{{< resume-role title="Director of Engineering" dates="Aug 2023 - Present" >}} 
+{{< resume-role title="Director of Engineering" dates="Aug 2023 - Nov 2024" >}} 
 Vertex AI offers everything you need to build and use generative AI—from AI solutions, to Search and Conversation, to 130+ foundation models, to a unified AI platform. Led a team of 20 engineers to automate and safeguard model releases at scale (LLM, Foundational, Gemini). Pioneered evaluation technologies that became standards across Google model development.
 
 ## *Google Inc \- Sunnyvale, CA \- Core Data Infrastructure*

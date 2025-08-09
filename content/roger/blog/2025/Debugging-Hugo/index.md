@@ -2,10 +2,8 @@
 title = 'Debugging Hugo'
 description = 'How I debug my Hugo site when things go awry.'
 date = 2025-07-26T19:44:51-07:00
-tags = [ "hugo" ]
-series = []
-type = "blog"
-author = "roger"
+tags = [ "hugo", "debugging"]
+layout = 'blog/single'
 +++
 
 # Credit
@@ -13,7 +11,7 @@ I found [this](https://write.rog.gr/writing/various-ways-to-debug-in-hugo/) wond
 
 # Debug Box (printf everything)
 One area that I diverged from Ruiz was to make the debug information only appear when a Site variable is set to true:
-```
+```toml
 [Params]
   debug = false
 ```
@@ -22,7 +20,7 @@ I created a partial that is part of `layouts/_defaults/baseof.html` so that it i
 ![Screenshot of the Debug box](debugbox.png)
 
 Here is a snapshot of the partial (`layouts/partials/debug/printf.html`), which as you can see simply dumps all debug output that Hugo generates in a big string:
-```
+```html
 {{ if .Site.Params.debug }}
 
 <div class="debugBox">
@@ -34,7 +32,7 @@ Here is a snapshot of the partial (`layouts/partials/debug/printf.html`), which 
 # Meta-Tags
 The second debug feature is more structured, but only visible when using developer tools to view the page's `<HEAD/>` tags.
 
-```
+```html
 <!-- Debug info only available when HUGO_PARAMS_DEBUG=true -->
 <meta name="hugo-bundle-type" content="leaf">
 <meta name="hugo-categories" content="">
@@ -63,7 +61,7 @@ I just leave this on all the time, exactly as Roger Ruiz also suggested, defined
 
 # Liberal Dosing of H1 Tags to Decode Templates
 It's an absolute requirement to always know what templates in the `layout/` folder are used to render which pages. To figure this out I peppered most of my templates with temporary tags such as:
-```
+```html
 <h1>layouts/_default/section.html</h1>
 ```
 While this is quite ugly, it got the job done. I then created a table for future me to reference. This was very important since I created the *structure* of this site in October of 2024, but didn't really dig into Hugo very deep until July of 2025. 

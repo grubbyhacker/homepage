@@ -1,6 +1,6 @@
-@import 'variables/catpuccin-mocha';
-@import 'variables/light-theme';
-@import 'variables/dark-theme';
+@import 'variables/catppuccin-mocha'; // palette constants
+@import 'variables/tokens';           // light semantics
+
 @import 'base';
 @import 'layout';
 @import 'components';
@@ -9,5 +9,8 @@
 @import 'shortcodes/note';
 @import 'shortcodes/resume-role';
 @import 'shortcodes/profile-intro';
+@import 'posts';
+@import 'tags';
 @import 'debug';
-@import 'dark-theme';
+
+@import 'variables/dark-overrides';   // dark theme overrides

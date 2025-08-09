@@ -26,11 +26,14 @@
   </head>
 <body class="loading">
   <div class="grid-container">
-    {{ if or .IsHome (eq .Slug "disclaimer") }}
-        {{ partial "header/home-header.html" . }}
+    {{ $users := .Site.Params.names | default (slice) }}
+
+    {{ if or .IsHome (not (in $users .Section)) }}
+      {{ partial "header/home-header.html" . }}
     {{ else }}
-        {{ partial "header/section-header.html" . }}
+      {{ partial "header/section-header.html" . }}
     {{ end }}
+
     <div class="content">
       {{ partial "debug/printf.html" . }}
       {{ block "content" . }}{{ end }}

@@ -1,0 +1,265 @@
+/* Flex container (reuse everywhere) */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+
+/* Base badge look (reuse your existing .tag-pill styles) */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* --- Palette buckets: set the base color + default fg for contrast --- */
+.tag-pill {
+  /* defaults if classes missing */
+  --chip-base: var(--text-muted);
+  --chip-fg: var(--background-invert);
+  color: var(--chip-fg);
+  background: var(--chip-base);
+  border-color: var(--chip-base);
+}
+
+/* Map 16 buckets to Catppuccin (tweak fg for readability) */
+.tag-palette-0 { --chip-base: var(--ctp-rosewater);  --chip-fg: #111; }
+.tag-palette-1 { --chip-base: var(--ctp-flamingo);   --chip-fg: #111; }
+.tag-palette-2 { --chip-base: var(--ctp-pink);       --chip-fg: #111; }
+.tag-palette-3 { --chip-base: var(--ctp-peach);      --chip-fg: #111; }
+.tag-palette-4 { --chip-base: var(--ctp-yellow);     --chip-fg: #111; }
+.tag-palette-5 { --chip-base: var(--ctp-green);      --chip-fg: #111; }
+.tag-palette-6 { --chip-base: var(--ctp-teal);       --chip-fg: #111; }
+.tag-palette-7 { --chip-base: var(--ctp-sky);        --chip-fg: #111; }
+.tag-palette-8 { --chip-base: var(--ctp-sapphire);   --chip-fg: #fff; }
+.tag-palette-9 { --chip-base: var(--ctp-blue);       --chip-fg: #fff; }
+.tag-palette-a { --chip-base: var(--ctp-lavender);   --chip-fg: #111; }
+.tag-palette-b { --chip-base: var(--ctp-mauve);      --chip-fg: #111; }
+.tag-palette-c { --chip-base: var(--ctp-maroon);     --chip-fg: #fff; }
+.tag-palette-d { --chip-base: var(--ctp-red);        --chip-fg: #fff; }
+.tag-palette-e { --chip-base: var(--ctp-surface1);   --chip-fg: var(--text); }
+.tag-palette-f { --chip-base: var(--ctp-overlay0);   --chip-fg: var(--text); }
+
+/* --- Shade modifiers: adjust lightness/darkness consistently --- */
+/* Uses CSS color-mix; if your toolchain/browser doesn’t support it, drop these
+   and keep the base color — you’ll still get 16 distinct colors. */
+
+.tag-shade-0 { /* base */ }
+.tag-shade-1 {
+  background: color-mix(in srgb, var(--chip-base) 85%, black);
+  border-color: color-mix(in srgb, var(--chip-base) 85%, black);
+}
+.tag-shade-2 {
+  background: color-mix(in srgb, var(--chip-base) 70%, black);
+  border-color: color-mix(in srgb, var(--chip-base) 70%, black);
+}
+.tag-shade-3 {
+  background: color-mix(in srgb, var(--chip-base) 85%, white);
+  border-color: color-mix(in srgb, var(--chip-base) 85%, white);
+}
+
+/* Hover/focus (kept simple so contrast remains OK) */
+.tag-pill:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  filter: saturate(1.05) brightness(0.98);
+}
+.tag-pill:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Keyboard focus */
+.tag-pill:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* COMPACT variant */
+.tag-list--compact {
+  gap: 0.35rem;            /* tighter spacing */
+  margin-block: 0.5rem;
+}
+
+.tag-pill--sm {
+  padding: 0.18rem 0.45rem; /* smaller padding */
+  font-size: 0.78rem;       /* a bit smaller text */
+  line-height: 1.1;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 1px rgba(0,0,0,.03);
+}
+
+/* Optional: a low-contrast monochrome style for super-dense clouds */
+.tag-pill--mono {
+  background-color: var(--background-alternative);
+  color: var(--text);
+  border-color: var(--border);
+
+  &:hover {
+    background-color: var(--hover);
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+}
+
+/* Ensure pills keep their own colors in both unvisited and visited states */
+.tag-pill:link,
+.tag-pill:visited {
+  color: var(--chip-fg);
+  background: var(--chip-base);
+  border-color: var(--chip-base);
+  text-decoration: none;
+}
+
+/* Hover/focus still do their thing */
+.tag-pill:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  filter: saturate(1.05) brightness(0.98);
+}
+
+.tag-pill:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* If you have compact/mono variants, inherit the same protection */
+.tag-pill--mono:link,
+.tag-pill--mono:visited {
+  background: var(--background-alternative);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.term {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.term__header {
+  width: 100%;
+  max-width: 860px;
+}
+
+.term__title {
+  font-size: clamp(2.2rem, 10vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: .5em;
+  margin-top: .5em;
+  text-align: left;
+
+  &::first-letter {
+    color: var(--invert-fg);
+    background-color: var(--invert-bg);
+    padding: 0 0.25em;
+    margin-right: 0.05em;
+    border-radius: 0.2em;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset;
+  }
+}
+
+.term__tagline {
+  margin: .35rem 0 0;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: var(--highlight);
+  font-style: italic;
+}
+
+.term__rule {
+  width: 100%;
+  max-width: 860px;
+  height: 1px;
+  border: 0;
+  background: var(--hr);
+  margin: .5rem 0 1rem;
+}
+
+.term__intro {
+  width: 100%;
+  max-width: 860px;
+  font-size: 1rem;
+  color: var(--text);
+  p { margin: 0 0 .75rem; }
+}
+
+.term__posts {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.term-post {
+  flex: 1 1 280px;
+  max-width: 360px;
+  box-sizing: border-box;
+  background: var(--card-bg, #fafafa);
+  border: 1px solid var(--border, #e5e5e5);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.term-post:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border-color: var(--border-strong, #d8d8d8);
+}
+
+.term-post__title {
+  font-size: 1.05rem;
+  line-height: 1.25;
+  margin: 0 0 .4rem;
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover { text-decoration: underline; }
+  }
+  color: var(--callout-text);
+}
+
+.term-post__desc {
+  margin: 0;
+  color: var(--muted, #666);
+  font-size: .95rem;
+}
+
+.term__empty {
+  width: 100%;
+  color: var(--muted, #777);
+  margin: 2rem 0;
+}
+
+/* Meta row inside each card: date left, reading time right */
+.term-post .post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-top: .15rem;
+  margin-bottom: .35rem;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+/* keep links clean in titles here as well */
+.term-post__title a {
+  text-decoration: none;
+  color: inherit;
+}
+.term-post__title a:hover { text-decoration: underline; }

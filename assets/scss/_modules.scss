@@ -35,7 +35,7 @@
 }
 
 .selectable:hover {
-  border: 2px solid var(--hover-bg-color);
+  border: 2px solid var(--bg-alt);
   border-radius: 8px;
 }
 
@@ -43,16 +43,23 @@
   text-decoration: none;
   border: none;
   padding: 0;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 .username {
   padding: 0;
+  padding-top: .5em;
   font-weight: 800;
   font-size: 2em;
 }
 
+.avatar {
+  display: grid;
+  place-items: center;
+}
+
 .avatar img {
+  
   width: 60%;
   height: auto;
   border-radius: 50%;
@@ -76,7 +83,7 @@
 }
 
 .navlink:hover {
-  border: 2px solid var(--hover-bg-color);
+  border: 2px solid var(--bg-alt);
 }
 
 .articlelist {
@@ -99,21 +106,17 @@
   gap: 0.75em;
 }
 
-.date {
-  grid-area: date;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+
 
 .title {
   grid-area: title;
   padding: 0;
   font-weight: 800;
   font-size: 2em;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text);
 }
 
 .listed-title {
   font-weight: bold;
+  color: var(--link);
 }

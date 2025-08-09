@@ -1,0 +1,27 @@
+{{ define "content" }}
+
+<h1>All Tags</h1>
+
+<ul class="term-grid">
+  {{ range .Data.Terms.Alphabetical }}
+    {{ $termPage := .Page }}
+    <li class="term-card">
+      <a class="term-title" href="{{ $termPage.RelPermalink }}">{{ $termPage.Title }}</a>
+
+      {{ with $termPage.Params.tagline }}
+        <div class="term-tagline">{{ . }}</div>
+      {{ end }}
+
+      {{ if $termPage.Description }}
+        <p class="term-desc">{{ $termPage.Description }}</p>
+      {{ else }}
+        {{ if $termPage.Content }}
+          <p class="term-desc">{{ $termPage.Plain | truncate 160 }}</p>
+        {{ end }}
+      {{ end }}
+
+      <small class="term-count">{{ len $termPage.Pages }} posts</small>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

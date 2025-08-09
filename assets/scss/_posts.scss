@@ -1,0 +1,95 @@
+.post-title h1.title {
+  font-size: clamp(2.2rem, 10vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: .5em;
+  margin-top: .5em;
+  text-align: left;
+
+  border:0;
+  box-shadow: none;
+  background-image: none;
+  text-decoration: none;
+  position: relative;
+
+  &::first-letter {
+    color: var(--invert-fg);
+    background-color: var(--invert-bg);
+    padding: 0 0.25em;
+    margin-right: 0.05em;
+    border-radius: 0.2em;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) inset;
+  }
+}
+
+.post-meta .date {
+    font-size: small;
+}
+
+.container.post article {
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Styles for the header area of an article */
+.article-header {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+
+  background-color: var(--background-alternative);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  /* Keep content aligned nicely */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Title inside the header — bigger & bolder */
+.article-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  line-height: 1.2;
+}
+
+/* Optional: Tag list in header */
+.article-header .tag-list {
+  margin-top: 0.5rem;
+}
+
+/* Regular H1 tags inside the article itself */
+.article-body h1 {
+    margin-bottom: 0;
+}
+
+.article-body p {
+    margin-top: .1em;
+}
+/*
+  For larger screens, make sure that articles don't just spread all the
+  way across the screen. Make it more readable by keeping it centered
+  and smaller.
+*/
+@media (min-width: 768px) { 
+  // For general pages like disclaimer.md
+  .container.page article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+
+  // For blog posts
+  .container.post article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .header {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

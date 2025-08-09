@@ -1,7 +1,6 @@
 baseURL = 'https://fleig.us/'
 languageCode = 'en-us'
 title = 'Fleig Family Website'
-disableKinds = ['taxonomy', 'term']
 
 [Params]
   names = ["amanda", "roger"]
@@ -11,3 +10,6 @@ disableKinds = ['taxonomy', 'term']
 [markup]
   [markup.sass]
     outputStyle = "compressed"
+
+[taxonomies]
+  tag = "tags"

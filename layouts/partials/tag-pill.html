@@ -1,0 +1,10 @@
+{{- $raw := . | string -}}                        {{/* make sure it's a string */}}
+{{- $label := lower (trim $raw " \t\r\n") -}}     {{/* trim spaces/tabs/newlines */}}
+{{- $h := md5 $label -}}
+{{- $pal := substr $h 0 1 -}}                     {{/* palette bucket: 0–f */}}
+{{- $shadeHex := substr $h 1 1 -}}                {{/* get the second hex character */}}
+{{- $hexmap := dict "0" 0 "1" 1 "2" 2 "3" 3 "4" 4 "5" 5 "6" 6 "7" 7 "8" 8 "9" 9 "a" 10 "b" 11 "c" 12 "d" 13 "e" 14 "f" 15 -}}
+{{- $shade := mod (index $hexmap $shadeHex) 4 -}}
+
+<a class="tag-pill tag-palette-{{ $pal }} tag-shade-{{ $shade }}"
+   href="{{ "/tags/" | relURL }}{{ $label | urlize }}">{{ $label }}</a>
