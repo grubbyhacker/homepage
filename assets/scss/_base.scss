@@ -63,26 +63,43 @@ blockquote {
   font-size: 1rem;
 }
 
-pre, code {
-  white-space: pre-wrap; /* Preserves whitespace and wraps lines as needed */
-  word-wrap: break-word; /* Breaks long words that would otherwise overflow */
-  overflow-wrap: break-word; /* Modern equivalent of word-wrap */
-  overflow-x: auto; /* Adds horizontal scrollbar if content exceeds available width */
-}
-
+/* Block code: pre owns the box */
 pre {
-  background-color: var( --pre-bg);
+  background-color: var(--pre-bg);
   padding: 1em;
   border: 1px solid var(--pre-border);
+  border-radius: 6px;       /* optional: nice corners */
+  overflow: auto;           /* scroll if needed */
 }
 
+/* Inline code style (your current rule is fine) */
 code {
-  font-family: monospace; 
+  font-family: monospace;
   font-size: 0.9em;
   background-color: var(--code-bg);
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
+
+/* IMPORTANT: neutralize inline code styling inside pre blocks */
+pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;         /* just in case */
+  display: block;           /* ensures full‑width rendering */
+  white-space: inherit;     /* use pre’s wrapping behavior */
+}
+
+.highlight pre,
+pre.chroma {
+  background-color: var(--pre-bg);
+  border: 1px solid var(--pre-border);
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.highlight code { background: transparent; }
 
 H1 {
   font-size: 2em;
