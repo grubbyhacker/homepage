@@ -46,7 +46,7 @@
 .tag-palette-c { --chip-base: var(--ctp-maroon);     --chip-fg: #fff; }
 .tag-palette-d { --chip-base: var(--ctp-red);        --chip-fg: #fff; }
 .tag-palette-e { --chip-base: var(--ctp-surface1);   --chip-fg: var(--text); }
-.tag-palette-f { --chip-base: var(--ctp-overlay0);   --chip-fg: var(--text); }
+.tag-palette-f { --chip-base: var(--ctp-teal);   --chip-fg: #111; }
 
 /* --- Shade modifiers: adjust lightness/darkness consistently --- */
 /* Uses CSS color-mix; if your toolchain/browser doesn’t support it, drop these
