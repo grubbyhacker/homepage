@@ -26,7 +26,7 @@
     {{ partial "debug/meta-tags.html" .Page }}
     {{ print "<!-- End debug info -->" | safeHTML -}}
   </head>
-<body class="loading">
+<body class="loading kind-{{ .Kind }}{{ if .IsHome }} is-home{{ end }}{{ if .IsSection }} is-section{{ end }}">
   <div class="grid-container">
     {{ $users := .Site.Params.names | default (slice) }}
 

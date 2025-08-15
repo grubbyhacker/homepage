@@ -200,3 +200,19 @@ img {
     }
   }
 }
+
+/* Wider layout for Section/Home pages on desktop */
+@media (min-width: 1024px) {
+  .is-section .content,
+  .is-home .content {
+    --content-max: 1200px;   // or 100ch, or 70rem, your call
+  }
+}
+
+/* Even wider on very large displays (optional) */
+@media (min-width: 1440px) {
+  .is-section .content,
+  .is-home .content {
+    --content-max: 1400px;
+  }
+}
