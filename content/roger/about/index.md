@@ -89,15 +89,12 @@ Technical teams should challenge limits and drive innovation. I motivate my engi
 * [Automatically Generating Machine Learning Models for Software Tools That Operate on Source Code](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11150877) (Us Pat. No. 11,150,877 B2)  
 * [Does mutation testing improve testing practices?](https://conf.researchr.org/details/icse-2021/icse-2021-papers/70/Does-mutation-testing-improve-testing-practices-) (ICSE 2021.)  
 * [Long Term Effects of Mutation Testing](https://research.google/pubs/long-term-effects-of-mutation-testing/) (ICSE 2021.)  
-* [Use of Machine Learning To Generate Estimates of Code Review Time and Effort](https://www.tdcommons.org/dpubs_series/3923/) (TD Commons)  
 * [Identification of Low-value Code to Improve Efficiency of Automated Code Analysis](https://www.tdcommons.org/dpubs_series/3922/) (TD Commons)  
 * [Techniques For Easy and Efficient Manipulations of Large Codebases](https://www.tdcommons.org/dpubs_series/3574/) (TD Commons)  
 * [Code coverage at Google](https://dl.acm.org/doi/10.1145/3338906.3340459) (ESEC/FSE 2019.)  
 * [State of Mutation Testing at Google](https://research.google/pubs/state-of-mutation-testing-at-google/) (ICSE \- SEIP 2018.)  
 * [An Industrial Application of Mutation Testing: Lessons, Challenges, and Research Directions](https://people.cs.umass.edu/~rjust/publ/industrial_mutation_icst_2018.pdf) (ICSTW \- Mutation 2018.)  
-* [Process for displaying test coverage data during code reviews](http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9,405,662.PN.&OS=PN/9,405,662&RS=PN/9,405,662) (US Pat. No. 9,405,662)  
-* [A genetic approach for random testing of database](https://www.vldb.org/conf/2007/papers/industrial/p1243-bati.pdf) (VLDB 2007.)  
-* [Indexing XML Data Stored in a Relational Database](https://www.vldb.org/conf/2004/IND5P2.PDF) (VLDB 2004.)
+* [Process for displaying test coverage data during code reviews](http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9,405,662.PN.&OS=PN/9,405,662&RS=PN/9,405,662) (US Pat. No. 9,405,662)
 
 # Skills
 
