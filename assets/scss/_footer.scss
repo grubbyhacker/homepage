@@ -1,0 +1,57 @@
+/* Footer base */
+.site-footer {
+  margin-top: 3rem;
+  color: var(--footer-fg, #6b7280);
+  background: var(--footer-bg, transparent);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.6;
+  padding: 0.85rem 0;
+}
+
+/* List resets + layout */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;              /* allow graceful wrapping */
+  justify-content: center;      /* centered on all viewports */
+  align-items: center;
+  gap: 0.4rem .25rem;             /* row/column gaps */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Items do not break mid-word for tiny screens */
+.footer-item {
+  white-space: nowrap;          /* keeps each item intact */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Add separators BETWEEN items, not after them */
+.footer-links li + li::before {
+  content: "|";
+  color: var(--footer-sep, #c5c9d3);
+  margin: 0 0.75rem 0 0;        /* space after the dot */
+  display: inline-block;
+}
+
+/* Links */
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Small screens: loosen spacing slightly for readability */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 1rem 0.5rem;
+  }
+  .footer-links {
+    gap: 0.35rem 0.75rem;
+  }
+}

@@ -50,27 +50,5 @@
   background-color: var(--bg);
 }
 
-.footer ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-}
-
-.footer ul a {
-  padding: 0;
-}
-
-.footer li {
-  font-size: 0.75em;
-}
-
-.footer li:not(:last-child) {
-  border-right: 1px solid var(--link);
-}
-
 
 

@@ -51,7 +51,7 @@ select {
   border: 2px solid transparent;
   border-radius: 8px;
   text-decoration: none;
-  padding: 1em;
+  padding: 0;
   color: var(--sitelink);
 
   &:visited { color: var(--sitelink); }

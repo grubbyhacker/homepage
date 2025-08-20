@@ -1,8 +1,21 @@
-<div class="footer centered-element">
-  <ul>
-    <li><a class="sitelink" href="{{ "" | absURL }}">{{ .Site.Params.title }}</a></li>
-    <li>©{{ now.Year }} &nbsp; </li>
-    <li><a class="sitelink" href="{{ "disclaimer" | relURL }}">Disclaimer</a></li>
-    <li>Powered by <a class="sitelink" href="https://gohugo.io">Hugo</a></li>
-  </ul>
-</div>
+<footer class="site-footer" role="contentinfo">
+  <nav aria-label="Footer">
+    <ul class="footer-links">
+      <li class="footer-item">
+        <a class="sitelink" href="{{ "/" | relURL }}">
+          {{ default .Site.Title .Site.Params.title }}
+        </a>
+      </li>
+
+      <li class="footer-item">© {{ now.Year }}</li>
+
+      <li class="footer-item">
+        <a class="sitelink" href="{{ "disclaimer/" | relURL }}">Disclaimer</a>
+      </li>
+
+      <li class="footer-item">
+        Powered by <a class="sitelink" href="https://gohugo.io">Hugo</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
