@@ -53,6 +53,7 @@ select {
   text-decoration: none;
   padding: 0;
   color: var(--sitelink);
+  font-family: 'Merriweather Sans', sans-serif;
 
   &:visited { color: var(--sitelink); }
   &:hover   { border: 2px solid var(--border-strong); }
