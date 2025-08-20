@@ -40,4 +40,7 @@
   /* inverted glyph (first-letter, pills, etc.) */
   --invert-bg: #000000;
   --invert-fg: #ffffff;
+
+  --pill-bg: var(--bg-alt);
+  --pill-fg: var(--text);
 }

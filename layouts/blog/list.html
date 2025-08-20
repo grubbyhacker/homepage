@@ -10,6 +10,8 @@
 
   <hr class="term__rule"/>
 
+  {{ partial "article-count.html" . }}
+
   <section class="term__posts">
     {{ range .Pages.ByDate.Reverse }}
       <article class="term-post">

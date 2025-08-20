@@ -1,0 +1,8 @@
+{{/* layouts/partials/article-count.html */}}
+{{/* Count only regular content pages in this list context */}}
+{{ $count := len .RegularPages }}
+{{ $label := cond (eq $count 1) "Article" "Articles" }}
+
+<div class="article-count" aria-live="polite">
+  <span class="pill">{{ $count }} {{ $label }}</span>
+</div>

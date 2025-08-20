@@ -10,6 +10,8 @@
 
   <hr class="term__rule"/>
 
+  {{ partial "article-count.html" . }}
+
   {{ if .Content }}
     <div class="term__intro">
       {{ .Content }}
