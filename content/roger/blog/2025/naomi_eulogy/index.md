@@ -3,7 +3,7 @@ title: "My Eulogy for Naomi"
 description: "Delivered in July of 2022 in Missouri"
 date: 2025-08-21T19:48:39-07:00
 dropcap: true
-draft: true
+draft: false
 tags: 
   - "naomi"
 layout: "blog/single"
