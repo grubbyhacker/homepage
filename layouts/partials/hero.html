@@ -1,0 +1,120 @@
+{{/* layouts/partials/hero.html */}}
+
+{{- $alt := .Title -}}
+{{- $credit := "" -}}
+{{- $src := "" -}}
+
+{{/* .Params.hero can be string OR map {src, alt, credit} */}}
+{{- with .Params.hero -}}
+  {{- if (isset . "src") -}}
+    {{- $src = .src -}}
+    {{- with .alt }}{{ $alt = . }}{{ end -}}
+    {{- with .credit }}{{ $credit = . }}{{ end -}}
+  {{- else -}}
+    {{- $src = . -}}  {{/* assume string */}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Absolute URL check (protocol or protocol-relative) */}}
+{{- $isAbs := or (hasPrefix $src "http://") (or (hasPrefix $src "https://") (hasPrefix $src "//")) -}}
+
+{{/* If we have a RELATIVE $src, try to resolve it to a Page Resource */}}
+{{- if and (ne $src "") (not $isAbs) -}}
+  {{- with .Resources.GetMatch $src -}}
+    {{- $res := . -}}
+    {{- $widths := slice 480 768 1024 1280 1600 -}}
+    {{- $sizes := "(min-width: 900px) 900px, 100vw" -}}
+    {{- $jpgSet := slice -}}
+    {{- $webpSet := slice -}}
+    {{- range $w := $widths -}}
+      {{- $jpg := $res.Resize (printf "%dx q85" $w) -}}
+      {{- $webp := $res.Resize (printf "%dx webp q80" $w) -}}
+      {{- $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $w) -}}
+      {{- $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $w) -}}
+    {{- end -}}
+    {{- $fallback := $res.Resize "1200x q85" -}}
+
+    <figure class="hero">
+      <picture>
+        <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
+        <img
+          src="{{ $fallback.RelPermalink }}"
+          srcset="{{ delimit $jpgSet ", " }}"
+          sizes="{{ $sizes }}"
+          alt="{{ $alt }}"
+          loading="lazy"
+          decoding="async"
+          width="{{ $fallback.Width }}" height="{{ $fallback.Height }}">
+      </picture>
+      {{ with $credit }}<figcaption class="hero-credit">{{ . }}</figcaption>{{ end }}
+    </figure>
+  {{- else -}}
+    {{- /* Try common filenames in the bundle */ -}}
+    {{- with .Resources.GetMatch "{hero,featured}.*" -}}
+      {{- $res := . -}}
+      {{- $widths := slice 480 768 1024 1280 1600 -}}
+      {{- $sizes := "(min-width: 900px) 900px, 100vw" -}}
+      {{- $jpgSet := slice -}}
+      {{- $webpSet := slice -}}
+      {{- range $w := $widths -}}
+        {{- $jpg := $res.Resize (printf "%dx q85" $w) -}}
+        {{- $webp := $res.Resize (printf "%dx webp q80" $w) -}}
+        {{- $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $w) -}}
+        {{- $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $w) -}}
+      {{- end -}}
+      {{- $fallback := $res.Resize "1200x q85" -}}
+
+      <figure class="hero">
+        <picture>
+          <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
+          <img
+            src="{{ $fallback.RelPermalink }}"
+            srcset="{{ delimit $jpgSet ", " }}"
+            sizes="{{ $sizes }}"
+            alt="{{ $alt }}"
+            loading="lazy"
+            decoding="async"
+            width="{{ $fallback.Width }}" height="{{ $fallback.Height }}">
+        </picture>
+        {{ with $credit }}<figcaption class="hero-credit">{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{- else -}}
+      {{- /* Fall back to using $src as URL (relative or absolute), or site param */ -}}
+      {{- $url := "" -}}
+      {{- if ne $src "" -}}
+        {{- if $isAbs -}}
+          {{- $url = $src -}}
+        {{- else -}}
+          {{- $url = ($src | relURL) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- with site.Params.defaultHero }}{{ $url = . }}{{ end -}}
+      {{- end -}}
+      {{- if ne $url "" -}}
+        <figure class="hero">
+          <img src="{{ $url }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+          {{ with $credit }}<figcaption class="hero-credit">{{ . }}</figcaption>{{ end }}
+        </figure>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+{{- else -}}
+  {{- /* $src is empty OR absolute URL: render simple <img> with URL or site fallback */ -}}
+  {{- $url := "" -}}
+  {{- if ne $src "" -}}
+    {{- if $isAbs -}}
+      {{- $url = $src -}}
+    {{- else -}}
+      {{- $url = ($src | relURL) -}}
+    {{- end -}}
+  {{- else -}}
+    {{- with site.Params.defaultHero }}{{ $url = . }}{{ end -}}
+  {{- end -}}
+  {{- if ne $url "" -}}
+    <figure class="hero">
+      <img src="{{ $url }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+      {{ with $credit }}<figcaption class="hero-credit">{{ . }}</figcaption>{{ end }}
+    </figure>
+  {{- end -}}
+{{- end -}}

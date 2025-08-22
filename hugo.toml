@@ -10,6 +10,10 @@ title = 'Fleig Family Website'
 [markup]
   [markup.sass]
     outputStyle = "compressed"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 
 [taxonomies]
   tag = "tags"

@@ -1,0 +1,14 @@
+.hero {
+  margin: 0 0 1rem;
+}
+.hero picture, .hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional */
+}
+.hero-credit {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: .4rem;
+}

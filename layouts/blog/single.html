@@ -3,6 +3,7 @@
 {{ end }}
 {{ define "content" }}
   <section class="container post">
+    {{ partial "hero.html" . }}
     <article>
       <header class="article-header">
         <div class="post-title">
@@ -29,7 +30,7 @@
         </div>
       </header>
 
-      <div class="article-body">
+      <div class="article-body {{ if .Params.dropcap }}dropcap{{ end }}">
         {{ if .Params.featured_image }}
           <img src='{{ .Params.featured_image }}' alt="Featured image"/>
         {{ end }}

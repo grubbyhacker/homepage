@@ -129,3 +129,14 @@
   text-align: center;
   white-space: nowrap;
 }
+
+.article-body.dropcap p::first-letter {
+  initial-letter: 2 1;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+/* Disable dropcap inside blockquotes */
+.article-body.dropcap blockquote p::first-letter {
+  all: unset;
+}
